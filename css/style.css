@@ -1,6 +1,7 @@
 
 body, html
 {
+    background-color: darkslategray;
     font-family: Verdana, sans-serif;
 }
 
@@ -51,12 +52,16 @@ body, html
 }
 
 
+#NavBarTextDropDown
+{
+    font-size: 20px;
+}
+
 #NavBarTextDropDown:hover
 {
     font-weight: bold;
     color: #ee7d11;
 }
-
 
 #FormText
 {
