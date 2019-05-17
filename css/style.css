@@ -14,7 +14,7 @@ body, html
 #HomeText:hover
 {
     color: #ee7d11;
-    font-size: 33px;
+    font-size: 31px;
 }
 
 #NavBarText
@@ -23,8 +23,85 @@ body, html
     font-size: 22px;
 }
 
+#NavBarTextMenukaart:hover
+{
+    font-weight: bold;
+    color: #ee7d11;
+    font-size: 25px;
+}
+
+#NavBarTextReseveren:hover
+{
+    font-weight: bold;
+    color: #ee7d11;
+    font-size: 25px;
+}
+
+#NavBarTextBestellen:hover
+{
+    font-weight: bold;
+    color: #ee7d11;
+    font-size: 25px;
+}
+
+#NavBarTextAccount:hover
+{
+    font-weight: bold;
+    color: #ee7d11;
+}
 
 
+#NavBarTextDropDown:hover
+{
+    font-weight: bold;
+    color: #ee7d11;
+}
+
+
+#FormText
+{
+    font-size: 16px;
+}
+
+#FormText:hover
+{
+    font-weight: bold;
+    text-decoration: none;
+    color: #ee7d11;
+
+}
+
+#FooterColor
+{
+    background-color: #f8f9fa;
+}
+
+.FooterLine
+{
+    background-color: #343a40;
+}
+
+.FormText
+{
+    font-weight: bold;
+    font-size: 37px;
+}
+
+.FooterText a
+{
+    font-weight: bold;
+    text-transform:  uppercase;
+    color: #007bff;
+}
+
+.FooterText a:hover
+{
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ee7d11;
+    font-size: 16px;
+}
 
 
 

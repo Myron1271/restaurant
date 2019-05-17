@@ -5,13 +5,13 @@
     <div class="container">
         <div class="row text-center d-flex justify-content-center pt-4 mb-3 FooterText">
             <div class="col-md-2 mb-3">
-                <a href="./Geschiedenis.php">Geschiedenis</a>
+                <a href="./menukaart.php">Menukaart</a>
             </div>
             <div class="col-md-2 mb-3">
-                <a href="./Fotos.php">Foto's</a>
+                <a href="./reseveren.php">Reseveren</a>
             </div>
             <div class="col-md-2 mb-3">
-                <a href="./Contact.php">Contact</a>
+                <a href="./bestellen.php">Bestellen</a>
             </div>
         </div>
         <hr class="FooterLine " style="margin: 0 20%;">
