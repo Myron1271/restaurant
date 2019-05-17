@@ -15,7 +15,7 @@
 
 </head>
 
-<body >
+<body background="img/Restaurant-Backround1.png" style="background-size: cover";>
 
 
 
