@@ -1,14 +1,14 @@
 <?php
 
-session_start();
-if (!isset($_SESSION['user']))
-{
+    session_start();
+    if (!isset($_SESSION['user']))
+    {
 
-}
-else
-{
-    header("location: Account.php");
-}
+    }
+        else
+        {
+            header("location: Account.php");
+        }
 ?>
 
 <!doctype html>

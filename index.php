@@ -1,5 +1,7 @@
 <?php
 
+    session_start();
+
 ?>
 
 
@@ -21,7 +23,7 @@
 
 </head>
 
-<body background="img/Restaurant-Backround1.png" style="background-size: cover";>
+<body background="img/Restaurant-Backround1.png" style="background-size: cover" class="d-flex flex-column h-100">
 
 <header>
     <?php
@@ -30,7 +32,10 @@
 </header>
 
 
+<main>
+    <br>
 
+</main>
 
 
 <footer>

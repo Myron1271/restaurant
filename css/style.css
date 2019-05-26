@@ -1,8 +1,8 @@
 
 body, html
 {
-    background-color: darkslategray;
     font-family: Verdana, sans-serif;
+    height: 100%;
 }
 
 #HomeText
@@ -63,24 +63,6 @@ body, html
     color: #ee7d11;
 }
 
-#FormText
-{
-    font-size: 16px;
-}
-
-#FormText:hover
-{
-    font-weight: bold;
-    text-decoration: none;
-    color: #ee7d11;
-
-}
-
-#FooterColor
-{
-    background-color: #f8f9fa;
-}
-
 .FooterLine
 {
     background-color: #343a40;
@@ -106,6 +88,25 @@ body, html
     text-decoration: none;
     color: #ee7d11;
     font-size: 16px;
+}
+
+
+.NaamEten
+{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.NummerEten
+{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.PrijsEten
+{
+    font-weight: bold;
+    font-size: 22px;
 }
 
 

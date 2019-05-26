@@ -1,5 +1,7 @@
 <?php
 
+    session_start();
+
 ?>
 
 
@@ -29,9 +31,15 @@
     ?>
 </header>
 
+<main style="margin-top: 50px; margin-bottom: 50px">
+    <div class="container">
+        <div class="row justify-content-md-center bg-dark text-white">
+            <div class="col-sm-8 NaamEten">Naam Eten</div>
+            <div class="col-sm-2 NummerEten">Nummer van 't eten</div>
+            <div class="col-sm-2 PrijsEten">Prijs van het eten</div>
 
-
-
+        </div>
+</main>
 
 <footer>
     <?php
