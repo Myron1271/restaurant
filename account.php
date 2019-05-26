@@ -1,17 +1,10 @@
 <?php
 
     include_once './func/registeren.func.php';
-    $_SESSION['message'] = "";
 
 
-    if (isset($_SESSION['user']))
-    {
+    $_SESSION['message'] = '';
 
-    }
-    else
-        {
-            header("location: Inloggen.php");
-        }
 ?>
 
 <!doctype html>
@@ -45,7 +38,7 @@
     </div>
     <form class="text-center p-5 col-md-4 offset-md-4 bg-light rounded position-relative" action="account.php" method="post" enctype="multipart/form-data">
         <h2>Voeg een nieuwe werknemer toe</h2>
-        <h2><? $_SESSION['message'];?></h2>
+        <p><?= $_SESSION['message']?></p>
         <br>
         <div class="row">
             <div class="col-md-8 offset-md-2">
