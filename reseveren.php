@@ -1,6 +1,7 @@
 <?php
 
     session_start();
+    include_once './func/reserveringen.toevoegen.func.php';
 
 ?>
 
@@ -23,7 +24,7 @@
 
 </head>
 
-<body background="img/Restaurant-Backround1.png" style="background-size: cover";>
+<body background="img/Restaurant-Backround3.png" style="background-size: cover";>
 
 <header>
     <?php
@@ -32,7 +33,50 @@
 </header>
 
 
+<main>
+    <br>
+    <br>
+    <form class="text-center p-5 col-md-4 offset-md-4 bg-light rounded position-relative" action="reseveren.php" method="post">
+        <p class="FormText mb-4">Vul de gegevens in en klik Reserveren</p>
+        <div class="ReserveringSuccesMessage"><?= $_SESSION['SuccesMessage'] ?></div>
+        <div class="ReserveringFailMessage"><?= $_SESSION['FailMessage'] ?></div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3 text-center">
+                <div class="ReserverenText">Datum</div>
+                <input type="date" name="datum" class="form-control" required>
+            </div>
+            <div class="col-md-4 offset-md-4" style="margin-top: 10px">
+                <div class="ReserverenText">Tijd</div>
+                <input type="time" name="tijd" class="form-control" required>
+            </div>
+            <div class="col-md-4 offset-md-4" style="margin-top: 10px">
+                <div class="ReserverenText">Tafel</div>
+                <input style="text-align: center" type="number" name="tafel" class="form-control" max="10" onkeyup="if (this.value > 10) this.value = 10;" required>
+            </div>
+            <div class="col-md-6 offset-md-3" style="margin-top: 10px">
+                <div class="ReserverenText">Klant Naam</div>
+                <input type="text" name="klantnaam" class="form-control" required>
+            </div>
+            <div class="col-md-6 offset-md-3" style="margin-top: 10px">
+                <div class="ReserverenText">Telefoonnummer</div>
+                <input type="number" name="telefoonnummer" class="form-control" maxlength="12" required>
+            </div>
+            <div class="col-md-4 offset-md-4" style="margin-top: 10px">
+                 <div class="ReserverenText">Aantal Personen (Max 50)</div>
+                <input style="text-align: center" type="number" name="aantalpersonen" class="form-control" max="50" onkeyup="if (this.value > 50) this.value = 50;" required>
+            </div>
+        </div>
+        <button class="btn btn-info my-4 btn-block col-md-8 offset-md-2" type="Submit" name="Submit_Reserveren">Reserveren</button>
+    </form>
 
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</main>
 
 
 <footer>

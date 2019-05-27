@@ -109,6 +109,27 @@ body, html
     font-size: 22px;
 }
 
+.ReserverenText
+{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.ReserveringSuccesMessage
+{
+    font-weight: bold;
+    font-size: 22px;
+    color: limegreen;
+    padding-bottom: 20px;
+}
+
+.ReserveringFailMessage
+{
+    font-weight: bold;
+    font-size: 22px;
+    color: Red;
+    padding-bottom: 20px;
+}
 
 
 

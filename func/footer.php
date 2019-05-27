@@ -11,7 +11,7 @@
                 <a href="./reseveren.php">Reseveren</a>
             </div>
             <div class="col-md-2 mb-3">
-                <a href="./bestellen.php">Bestellen</a>
+                <a href="./bestellen.php">Bestellingen</a>
             </div>
         </div>
         <hr class="FooterLine " style="margin: 0 20%;">

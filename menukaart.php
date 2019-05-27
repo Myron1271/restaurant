@@ -23,7 +23,7 @@
 
 </head>
 
-<body background="img/Restaurant-Backround1.png" style="background-size: cover";>
+<body background="img/Restaurant-Backround2.png" style="background-size: cover";>
 
 <header>
     <?php
@@ -39,6 +39,31 @@
             <div class="col-sm-2 PrijsEten">Prijs van het eten</div>
 
         </div>
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 </main>
 
 <footer>

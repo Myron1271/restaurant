@@ -34,6 +34,66 @@
 
 <main>
     <br>
+    <br>
+    <div class="container">
+        <h1 style="text-align: center; color: white;">Welkom bij Excellent Taste!</h1>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                    <img class="card-img-top" src="./img/food1.jpg" alt="Card image cap">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Klik op de knop voor ons menukaart</h5>
+                        <a href="#" class="btn btn-primary">Menukaart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <img class="card-img-top" src="./img/food3.jpg" alt="Card image cap">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Klik op de knop om te reserveren</h5>
+                        <a href="#" class="btn btn-primary">Reserveren</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <img class="card-img-top" src="./img/food2.jpg" alt="Card image cap">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Klik op de knop voor contact info</h5>
+                        <a href="#" class="btn btn-primary">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
 
 </main>
 

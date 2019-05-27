@@ -1,9 +1,7 @@
 <?php
 
+    session_start();
     include_once './func/registeren.func.php';
-
-
-    $_SESSION['message'] = '';
 
 ?>
 
@@ -24,7 +22,7 @@
 
 </head>
 
-<body background="img/Restaurant-Backround1.png" style="background-size: cover">
+<body style="background-color: darkslategray">
 
 <header>
     <?php
@@ -38,8 +36,8 @@
     </div>
     <form class="text-center p-5 col-md-4 offset-md-4 bg-light rounded position-relative" action="account.php" method="post" enctype="multipart/form-data">
         <h2>Voeg een nieuwe werknemer toe</h2>
-        <p><?= $_SESSION['message']?></p>
-        <br>
+        <div class="ReserveringSuccesMessage"><?= $_SESSION['SuccesMessage'] ?></div>
+        <div class="ReserveringFailMessage"><?= $_SESSION['FailMessage'] ?></div>
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <input type="text" name="Username_Register" class="form-control" placeholder="Gebruikersnaam" required>
@@ -57,28 +55,29 @@
     <div style="text-align: center; margin-top: 100px; color: white;">
 
     </div>
-    <form class="text-center p-5 col-md-4 offset-md-4 bg-light rounded position-relative">
-        <h1>Welkom!</h1>
-        <span class="user"><?= $_SESSION['user']?></span>
-        <br>
+    <div class="container">
         <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <a style="font-weight: bold">Klik hier als u de menukaart wilt veranderen</a>
-                <br>
-                <button type="button" class="btn btn-primary">Klik Hier</button>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Klik op de knop voor het reserveringen overzicht</h5>
+                        <a href="#" class="btn btn-primary">Overzicht Reserveringen</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-8 offset-md-2" style="margin-top: 10px">
-
-            </div>
-            <div class="col-md-8 offset-md-2" style="margin-top: 10px">
-
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Klik op de knop om reserveringen te wijzigen</h5>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </form>
-
-    <div style="text-align: center; margin-top: 100px; color: white;">
-
     </div>
+
+    <br>
+    <br>
 
 
 
