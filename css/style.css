@@ -14,7 +14,7 @@ body, html
 
 #HomeText:hover
 {
-    color: #ee7d11;
+    color: #007bff;
     font-size: 31px;
 }
 
@@ -27,28 +27,28 @@ body, html
 #NavBarTextMenukaart:hover
 {
     font-weight: bold;
-    color: #ee7d11;
+    color: #007bff;
     font-size: 25px;
 }
 
 #NavBarTextReseveren:hover
 {
     font-weight: bold;
-    color: #ee7d11;
+    color: #007bff;
     font-size: 25px;
 }
 
 #NavBarTextBestellen:hover
 {
     font-weight: bold;
-    color: #ee7d11;
+    color: #007bff;
     font-size: 25px;
 }
 
 #NavBarTextAccount:hover
 {
     font-weight: bold;
-    color: #ee7d11;
+    color: #007bff;
 }
 
 
@@ -59,8 +59,14 @@ body, html
 
 #NavBarTextDropDown:hover
 {
+    font-weight: 600;
+    color: #007bff;
+}
+
+#AccountName:hover
+{
     font-weight: bold;
-    color: #ee7d11;
+    color: #007bff;
 }
 
 .FooterLine
@@ -89,7 +95,6 @@ body, html
     color: #ee7d11;
     font-size: 16px;
 }
-
 
 .NaamEten
 {

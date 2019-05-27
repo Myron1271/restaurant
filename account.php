@@ -57,18 +57,26 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <div class="card">
                     <div class="card-body text-center">
                         <h5 class="card-title">Klik op de knop voor het reserveringen overzicht</h5>
-                        <a href="#" class="btn btn-primary">Overzicht Reserveringen</a>
+                        <a href="reserveringenbeheren.php" class="btn btn-primary">Overzicht Reserveringen</a>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <div class="card">
                     <div class="card-body text-center">
-                        <h5 class="card-title">Klik op de knop om reserveringen te wijzigen</h5>
+                        <h5 class="card-title">Klik op de knop om reserveringen te wijzigen/verwijderen</h5>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Klik hier op de knop om naar de bon te gaan</h5>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
@@ -78,8 +86,6 @@
 
     <br>
     <br>
-
-
 
 </main>
 

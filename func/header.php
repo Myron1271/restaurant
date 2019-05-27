@@ -4,7 +4,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" id="HomeText" href="index.php">Home</a>
-        <button class="navbar-toggler" type="button"data-toggle="collapse" data-target="#navbarText"
+        <button class="navbar-toggler" type="button"    data-toggle="collapse" data-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -22,15 +22,17 @@
             </ul>
             <ul class="nav navbar-nav navbar-right" id="NavBarText">
                 <li class="nav-item">
-                    <a class="nav-link" id="Username" href="./Account.php"></a>
+                    <a class="nav-link" id="AccountName" href="./Account.php"></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="NavBarTextAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Account
                     </a>
                     <div style="padding-right: 150px">
-                        <div style="text-align: center" class="dropdown-menu animate rotateInDownRight" aria-labelledby="NavBarTextAccount">
+                        <div style="text-align: center; margin-left: -90px" class="dropdown-menu animate rotateInDownRight" aria-labelledby="NavBarTextAccount">
                             <a class="dropdown-item" id="NavBarTextDropDown" href="./inloggen.php">Inloggen</a>
+                            <a class="dropdown-item" id="NavBarTextDropDown" href="./reserveringenbeheren.php">Beheer Reserveringen</a>
+                            <a class="dropdown-item" id="NavBarTextDropDown" href="./reserveringenverwijderen.php">Verwijder Reservering</a>
                             <hr class="FooterLine " style="margin: 0 20%;">
                             <a class="dropdown-item" id="NavBarTextDropDown" href="./func/uitloggen.func.php">Uitloggen</a>
                         </div>
@@ -39,8 +41,8 @@
             </ul>
         </div>
     </nav>
-    <script type="text/javascript">
+    <script class="AccountName" type="text/javascript">
         var Username = '<?php echo $_SESSION['user'];?>';
-        document.getElementById('Username').innerHTML= Username;
+        document.getElementById('AccountName').innerHTML= Username;
     </script>
 </header>

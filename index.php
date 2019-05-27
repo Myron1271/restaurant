@@ -1,5 +1,6 @@
 <?php
 
+    //Dit start de session van de ingelogde user
     session_start();
 
 ?>
@@ -19,13 +20,14 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Restaurant</title>
+    <title>Excellent Taste</title>
 
 </head>
 
 <body background="img/Restaurant-Backround1.png" style="background-size: cover" class="d-flex flex-column h-100">
 
 <header>
+    <!--Dit zorgt ervoor dat de navbar op elke pagina komt te staan-->
     <?php
         include_once 'func/header.php';
     ?>
@@ -44,22 +46,22 @@
                     <img class="card-img-top" src="./img/food1.jpg" alt="Card image cap">
                     <div class="card-body text-center">
                         <h5 class="card-title">Klik op de knop voor ons menukaart</h5>
-                        <a href="#" class="btn btn-primary">Menukaart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card">
-                    <img class="card-img-top" src="./img/food3.jpg" alt="Card image cap">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Klik op de knop om te reserveren</h5>
-                        <a href="#" class="btn btn-primary">Reserveren</a>
+                        <a href="menukaart.php" class="btn btn-primary">Menukaart</a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="card">
                     <img class="card-img-top" src="./img/food2.jpg" alt="Card image cap">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Klik op de knop om te reserveren</h5>
+                        <a href="reseveren.php" class="btn btn-primary">Reserveren</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <img class="card-img-top" src="./img/food3.jpg" alt="Card image cap">
                     <div class="card-body text-center">
                         <h5 class="card-title">Klik op de knop voor contact info</h5>
                         <a href="#" class="btn btn-primary">Contact</a>
@@ -70,19 +72,6 @@
     </div>
 
 
-
-
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <br>
     <br>
     <br>
@@ -99,6 +88,7 @@
 
 
 <footer>
+    <!--Dit zorgt ervoor dat de footer op elke pagina komt te staan-->
     <?php
     include_once 'func/footer.php';
     ?>
