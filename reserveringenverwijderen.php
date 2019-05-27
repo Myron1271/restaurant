@@ -69,9 +69,13 @@
             if ($result->num_rows > 0) {
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
-                    echo "<tr><td>" . $row["datum"] . "</td><td>" . $row["tijd"]. "</td>
-                    <td>" . $row["tafel"]. "</td><td>" . $row["klantnaam"]. "</td><td>" . $row["telefoonnummer"]. "</td>
-                    <td>" . $row["aantalpersonen"]. "</td><td><a href='./reserveringenverwijderen.php?id=". $row['id'] ."' class='btn btn-danger'>Verwijder Reservering</a></td></tr>";
+                    echo "<tr><td>" . $row["datum"] . "</td>
+                                <td>" . $row["tijd"]. "</td>
+                                    <td>" . $row["tafel"]. "</td>
+                                        <td>" . $row["klantnaam"]. "</td>
+                                            <td>" . $row["telefoonnummer"]. "</td>
+                                                <td>" . $row["aantalpersonen"]. "</td>
+                                                    <td><a href='./reserveringenverwijderen.php?id=". $row['id'] ."' class='btn btn-danger'>Verwijder Reservering</a></td></tr>";
                 }
                 echo "</table>";
             }
