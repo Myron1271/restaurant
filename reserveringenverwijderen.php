@@ -1,17 +1,17 @@
 <?php
 
-//Dit start de session van de ingelogde user
-session_start();
-if (isset($_SESSION['user']))
-{
+    //Dit start de session van de ingelogde user
+    session_start();
+    if (isset($_SESSION['user']))
+    {
 
-}
-else
-{
-    header("location: inloggen.php");
-}
+    }
+    else
+    {
+        header("location: inloggen.php");
+    }
 
-include_once './func/reserveringen.bekijken.func.php'
+    include_once './func/reserveringen.verwijderen.func.php';
 
 ?>
 
@@ -45,16 +45,13 @@ include_once './func/reserveringen.bekijken.func.php'
 
 
 <main>
-
     <br>
-
     <div class="container">
-        <h1 style="text-align: center; color: white;">Reserveringen overzicht</h1>
+        <h1 style="text-align: center; color: white;">Reserveringen Verwijderen</h1>
         <br>
         <table class="table table-bordered text-white text-center">
             <thead class="thead-light">
             <tr>
-                <th scope="col">ID</th>
                 <th scope="col">Datum</th>
                 <th scope="col">Tijd</th>
                 <th scope="col">Tafel</th>
@@ -72,9 +69,9 @@ include_once './func/reserveringen.bekijken.func.php'
             if ($result->num_rows > 0) {
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
-                    echo "<tr><th>" . $row["id"]. "</th><td>" . $row["datum"] . "</td><td>" . $row["tijd"]. "</td>
+                    echo "<tr><td>" . $row["datum"] . "</td><td>" . $row["tijd"]. "</td>
                     <td>" . $row["tafel"]. "</td><td>" . $row["klantnaam"]. "</td><td>" . $row["telefoonnummer"]. "</td>
-                    <td>" . $row["aantalpersonen"]. "</td><td><button class='brn btn-danger'>Verwijder Reservering</button></td></tr>";
+                    <td>" . $row["aantalpersonen"]. "</td><td><a href='./reserveringenverwijderen.php?id=". $row['id'] ."' class='btn btn-danger'>Verwijder Reservering</a></td></tr>";
                 }
                 echo "</table>";
             }

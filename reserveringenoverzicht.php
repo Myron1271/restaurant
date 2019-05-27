@@ -54,34 +54,35 @@
         <table class="table table-bordered text-white text-center">
             <thead class="thead-light">
             <tr>
-                <th scope="col">ID</th>
                 <th scope="col">Datum</th>
                 <th scope="col">Tijd</th>
                 <th scope="col">Tafel</th>
                 <th scope="col">Naam</th>
                 <th scope="col">Telefoon</th>
                 <th scope="col">Aatal Personen</th>
-                <th scope="col">Reservering Gebruikt?</th>
             </tr>
             </thead>
 
             <?php
 
-            $sql = "SELECT id, datum, tijd, tafel, klantnaam, telefoonnummer, aantalpersonen FROM reserveringen";
+            $sql = "SELECT datum, tijd, tafel, klantnaam, telefoonnummer, aantalpersonen FROM reserveringen";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
-                    echo "<tr><th>" . $row["id"]. "</th><td>" .$row["datum"] . "</td><td>" .$row["tijd"]. "</td>
-                    <td>" .$row["tafel"]. "</td><td>" .$row["klantnaam"]. "</td><td>" .$row["telefoonnummer"]. "</td>
-                    <td>" .$row["aantalpersonen"]. "</td><td><input type='radio'> Ja <input type='radio'> Nee </td></tr>";
+                    echo "<tr><td>" .$row["datum"] ."</td>
+                                <td>" .$row["tijd"]."</td>
+                                    <td>" .$row["tafel"]. "</td>
+                                        <td>" .$row["klantnaam"]. "</td>
+                                            <td>" .$row["telefoonnummer"]. "</td>
+                                                <td>" .$row["aantalpersonen"]. "</td></tr>";
                 }
                 echo "</table>";
             }
             else
-                {
-                    echo "<h3 style='text-align: center; color: red;'>Helaas zijn er op dit moment geen reserveringen!</h3>";
-                }
+            {
+                echo "<h3 style='text-align: center; color: red;'>Helaas zijn er op dit moment geen reserveringen!</h3>";
+            }
             ?>
         </table>
     </div>

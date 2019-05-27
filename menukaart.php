@@ -32,15 +32,13 @@
 </header>
 
 <main style="margin-top: 50px; margin-bottom: 50px">
-    <div class="container">
-        <div class="row justify-content-md-center bg-dark text-white">
-            <div style="border: solid;" class="col-sm-8 NaamEten">Naam Eten</div>
-            <div style="border: solid;" class="col-sm-2 NummerEten">Nummer van 't eten</div>
-            <div style="border: solid;" class="col-sm-2 PrijsEten">Prijs van het eten</div>
+    <div class="container text-center">
 
-        </div>
+        <h1 style="color: red">Deze wordt op het moment bij gewerkt</h1>
 
 
+        <br>
+        <br>
         <br>
         <br>
         <br>

@@ -68,8 +68,8 @@
             <div class="col-sm-4">
                 <div class="card">
                     <div class="card-body text-center">
-                        <h5 class="card-title">Klik op de knop om reserveringen te wijzigen</h5>
-                        <a href="#" class="btn btn-primary">Wijzig Reserveringen</a>
+                        <h5 class="card-title">Klik op de knop om reserveringen te verwijderen</h5>
+                        <a href="reserveringenverwijderen.php" class="btn btn-primary">Verwijder Reserveringen</a>
                     </div>
                 </div>
             </div>
