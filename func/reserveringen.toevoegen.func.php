@@ -37,7 +37,7 @@
             //De messages die de gebruiker laten weten wat de uitkomst is van de functie
             if ($conn->query($sql) === true)
             {
-                $_SESSION['SuccesMessage'] = 'Reservering is gemaakt!';
+                $_SESSION['SuccesMessage'] = 'Reservering is gemaakt, alvast smakkelijk eten!';
             }
             else
              {

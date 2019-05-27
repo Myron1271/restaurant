@@ -1,17 +1,17 @@
 <?php
 
-//Dit start de session van de ingelogde user
-session_start();
-if (isset($_SESSION['user']))
-{
+    //Dit start de session van de ingelogde user
+    session_start();
+    if (isset($_SESSION['user']))
+    {
 
-}
-else
-{
-    header("location: inloggen.php");
-}
+    }
+    else
+    {
+        header("location: inloggen.php");
+    }
 
-include_once './func/reserveringen.bekijken.func.php'
+    include_once './func/reserveringen.bekijken.func.php'
 
 ?>
 
@@ -61,7 +61,7 @@ include_once './func/reserveringen.bekijken.func.php'
                 <th scope="col">Naam</th>
                 <th scope="col">Telefoon</th>
                 <th scope="col">Aatal Personen</th>
-                <th scope="col">Reserveringen Verwijderen</th>
+                <th scope="col">Reservering Gebruikt?</th>
             </tr>
             </thead>
 
@@ -72,16 +72,16 @@ include_once './func/reserveringen.bekijken.func.php'
             if ($result->num_rows > 0) {
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
-                    echo "<tr><th>" . $row["id"]. "</th><td>" . $row["datum"] . "</td><td>" . $row["tijd"]. "</td>
-                    <td>" . $row["tafel"]. "</td><td>" . $row["klantnaam"]. "</td><td>" . $row["telefoonnummer"]. "</td>
-                    <td>" . $row["aantalpersonen"]. "</td><td><button class='brn btn-danger'>Verwijder Reservering</button></td></tr>";
+                    echo "<tr><th>" . $row["id"]. "</th><td>" .$row["datum"] . "</td><td>" .$row["tijd"]. "</td>
+                    <td>" .$row["tafel"]. "</td><td>" .$row["klantnaam"]. "</td><td>" .$row["telefoonnummer"]. "</td>
+                    <td>" .$row["aantalpersonen"]. "</td><td><input type='radio'> Ja <input type='radio'> Nee </td></tr>";
                 }
                 echo "</table>";
             }
             else
-            {
-                echo "<h3 style='text-align: center; color: red;'>Helaas zijn er op dit moment geen reserveringen!</h3>";
-            }
+                {
+                    echo "<h3 style='text-align: center; color: red;'>Helaas zijn er op dit moment geen reserveringen!</h3>";
+                }
             ?>
         </table>
     </div>

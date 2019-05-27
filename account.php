@@ -32,7 +32,7 @@
 
 <main>
     <div style="text-align: center; margin-top: 50px; color: white;">
-
+    <h1>Welkom <?= $_SESSION['Username'] ?></h1>
     </div>
     <form class="text-center p-5 col-md-4 offset-md-4 bg-light rounded position-relative" action="account.php" method="post" enctype="multipart/form-data">
         <h2>Voeg een nieuwe werknemer toe</h2>
@@ -60,16 +60,16 @@
             <div class="col-sm-4">
                 <div class="card">
                     <div class="card-body text-center">
-                        <h5 class="card-title">Klik op de knop voor het reserveringen overzicht</h5>
-                        <a href="reserveringenbeheren.php" class="btn btn-primary">Overzicht Reserveringen</a>
+                        <h5 class="card-title">Klik op de knop voor een overzicht van de reserveringen</h5>
+                        <a href="reserveringenoverzicht.php" class="btn btn-primary">Overzicht Reserveringen</a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="card">
                     <div class="card-body text-center">
-                        <h5 class="card-title">Klik op de knop om reserveringen te wijzigen/verwijderen</h5>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Klik op de knop om reserveringen te wijzigen</h5>
+                        <a href="#" class="btn btn-primary">Wijzig Reserveringen</a>
                     </div>
                 </div>
             </div>

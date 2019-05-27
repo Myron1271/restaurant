@@ -29,10 +29,11 @@
                         Account
                     </a>
                     <div style="padding-right: 150px">
-                        <div style="text-align: center; margin-left: -90px" class="dropdown-menu animate rotateInDownRight" aria-labelledby="NavBarTextAccount">
+                        <div style="text-align: center; margin-left: -105px" class="dropdown-menu animate rotateInDownRight" aria-labelledby="NavBarTextAccount">
                             <a class="dropdown-item" id="NavBarTextDropDown" href="./inloggen.php">Inloggen</a>
-                            <a class="dropdown-item" id="NavBarTextDropDown" href="./reserveringenbeheren.php">Beheer Reserveringen</a>
+                            <a class="dropdown-item" id="NavBarTextDropDown" href="./reserveringenoverzicht.php">Overzicht Reserveringen</a>
                             <a class="dropdown-item" id="NavBarTextDropDown" href="./reserveringenverwijderen.php">Verwijder Reservering</a>
+                            <a class="dropdown-item" id="NavBarTextDropDown" href="./reserveringenwijzigen.php">Wijzig Reservering</a>
                             <hr class="FooterLine " style="margin: 0 20%;">
                             <a class="dropdown-item" id="NavBarTextDropDown" href="./func/uitloggen.func.php">Uitloggen</a>
                         </div>

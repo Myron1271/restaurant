@@ -50,7 +50,7 @@
                 <input type="time" name="tijd" class="form-control" required>
             </div>
             <div class="col-md-4 offset-md-4" style="margin-top: 10px">
-                <div class="ReserverenText">Tafel</div>
+                <div class="ReserverenText">Tafel ()</div>
                 <input style="text-align: center" type="number" name="tafel" class="form-control" max="10" onkeyup="if (this.value > 10) this.value = 10;" required>
             </div>
             <div class="col-md-6 offset-md-3" style="margin-top: 10px">
@@ -59,7 +59,7 @@
             </div>
             <div class="col-md-6 offset-md-3" style="margin-top: 10px">
                 <div class="ReserverenText">Telefoonnummer</div>
-                <input type="number" name="telefoonnummer" class="form-control" maxlength="12" required>
+                <input type="tel" name="telefoonnummer"  class="form-control" minlength="10" maxlength="10" required>
             </div>
             <div class="col-md-4 offset-md-4" style="margin-top: 10px">
                  <div class="ReserverenText">Aantal Personen (Max 50)</div>

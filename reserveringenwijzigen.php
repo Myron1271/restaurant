@@ -28,11 +28,11 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Restaurant</title>
+    <title>Excellent Taste</title>
 
 </head>
 
-<body style="background-color: darkslategray">
+<body style="background: darkslategray;">
 
 <header>
     <!--Dit zorgt ervoor dat de navbar op elke pagina komt te staan-->
@@ -43,59 +43,6 @@
 
 
 <main>
-    <br>
-
-    <div class="container">
-        <h1 style="text-align: center; color: white;">Reserveringen overzicht</h1>
-        <br>
-        <table class="table table-bordered text-white text-center">
-            <thead class="thead-light">
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Datum</th>
-                <th scope="col">Tijd</th>
-                <th scope="col">Tafel</th>
-                <th scope="col">Naam</th>
-                <th scope="col">Telefoon</th>
-                <th scope="col">Aatal Personen</th>
-                <th scope="col">Reservering Gebruiker?</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th>1</th>
-                <td>2019-05-31</td>
-                <td>22:22</td>
-                <td>3</td>
-                <td>Myron Seelen</td>
-                <td>2147483647</td>
-                <td>4</td>
-                <td>Ja/Nee</td>
-            </tr>
-            <tr>
-                <th>2</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th>3</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
     <br>
     <br>
     <br>
