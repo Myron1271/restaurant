@@ -81,7 +81,7 @@
             }
             else
             {
-                echo "<h3 style='text-align: center; color: red;'>Helaas zijn er op dit moment geen reserveringen!</h3>";
+                echo "<h3 style='text-align: center; color: red;'>Alle reserveringen zijn verwijderd</h3>";
             }
             ?>
         </table>

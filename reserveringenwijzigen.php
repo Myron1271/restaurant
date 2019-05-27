@@ -11,6 +11,8 @@
         header("location: inloggen.php");
     }
 
+    include_once './func/reserveringen.wijzigen.func.php';
+
 ?>
 
 
@@ -28,11 +30,11 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Excellent Taste</title>
+    <title>Restaurant</title>
 
 </head>
 
-<body style="background: darkslategray;">
+<body style="background-color: darkslategray">
 
 <header>
     <!--Dit zorgt ervoor dat de navbar op elke pagina komt te staan-->
@@ -43,17 +45,54 @@
 
 
 <main>
+
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
+    <div class="container">
+        <h1 style="text-align: center; color: white;">Reserveringen wijzigen</h1>
+        <br>
+        <!--De Table waar de data in moet komen te staan-->
+        <table class="table table-bordered text-white text-center">
+            <thead class="thead-light">
+            <tr>
+                <th scope="col">Datum</th>
+                <th scope="col">Tijd</th>
+                <th scope="col">Tafel</th>
+                <th scope="col">Naam</th>
+                <th scope="col">Telefoon</th>
+                <th scope="col">Aatal Personen</th>
+                <th scope="col">Wijzig Reserveringen</th>
+            </tr>
+            </thead>
+
+            <?php
+
+            //Query die de data uit de database select
+            $sql = "SELECT id, datum, tijd, tafel, klantnaam, telefoonnummer, aantalpersonen FROM reserveringen";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0)
+            {
+                //Dit laat de data zien in elke row
+                while($row = $result->fetch_assoc()) {
+                    echo "<tr><td>" .$row["datum"].         "<input type='date' name='datum' class='form-control' required></td>
+                              <td>" .$row["tijd"].          "<input type='time' name='tijd' class='form-control' required></td>
+                              <td>" .$row["tafel"].         "<input type='number' name='tafel' class='form-control' required></td>
+                              <td>" .$row["klantnaam"].     "<input type='text' name='klantnaam' class='form-control' required></td>
+                              <td>" .$row["telefoonnummer"]."<input type='tel' name='telefoonnummer' minlength='10' maxlength='10' class='form-control' required></td>
+                              <td>" .$row["aantalpersonen"]."<input type='number' name='aantalpersonen' class='form-control' required></td>
+                              <td><a href='./reserveringenwijzigen.php?id=". $row['id'] ."' class='btn btn-info'>Wijzig Reservering</a></td></tr>";
+                }
+                echo "</table>";
+            }
+            else
+            {
+                echo "<h3 style='text-align: center; color: red;'>Helaas zijn er op dit moment geen reserveringen!</h3>";
+            }
+            ?>
+        </table>
+    </div>
+
+
     <br>
     <br>
     <br>
