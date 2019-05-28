@@ -10,7 +10,7 @@
         header("location: inloggen.php");
     }
 
-    include_once './func/bon.func.php';
+    include_once './func/database.func.php';
     include_once './func/barman.bestelling.verwijderen.func.php';
 
 ?>

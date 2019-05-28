@@ -32,7 +32,7 @@
                             <a class="dropdown-item" id="NavBarTextDropDown" href="./reserveringenverwijderen.php">Verwijder Reservering</a>
                             <a class="dropdown-item" id="NavBarTextDropDown" href="./reserveringenwijzigen.php">Wijzig Reservering</a>
                             <a class="dropdown-item" id="NavBarTextDropDown" href="./drankentoevoegen.php">Dranken Toevoegen</a>
-                            <a class="dropdown-item" id="NavBarTextDropDown" href="./bon.php">Bon</a>
+                            <a class="dropdown-item" id="NavBarTextDropDown" href="./bon.php">Bonnen Weergeven</a>
                             <a class="dropdown-item" id="NavBarTextDropDown" href="./barmanbestelling.php">Barman</a>
                             <hr class="FooterLine " style="margin: 0 20%;">
                             <a class="dropdown-item" id="NavBarTextDropDown" href="./func/uitloggen.func.php">Uitloggen</a>

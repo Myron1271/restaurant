@@ -49,6 +49,7 @@
         </div>
         <button class="btn btn-info my-4 btn-block col-md-8 offset-md-2" type="Submit" name="Submit_Inloggen">Inloggen</button>
     </form>
+
     <br>
     <br>
     <br>

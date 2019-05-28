@@ -10,7 +10,7 @@
         header("location: inloggen.php");
     }
 
-    include_once './func/bon.func.php';
+    include_once './func/database.func.php';
     include_once './func/bon.verwijderen.func.php';
 
 ?>
@@ -49,6 +49,7 @@
     <div class="container offset-md-2">
         <h1 style="text-align: center; color: white;">Alle Bonnen</h1>
         <br>
+        <a href="bonpdf.php" class="btn btn-info">Maak een PDF</a>
         <table class="table table-bordered text-white text-center">
             <thead class="thead-light">
             <tr>

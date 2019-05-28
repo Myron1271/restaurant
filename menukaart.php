@@ -36,9 +36,6 @@
 
         <h1 style="color: red">Deze wordt op het moment bij gewerkt</h1>
 
-
-        <br>
-        <br>
         <br>
         <br>
         <br>
