@@ -46,7 +46,7 @@
 
 <main>
     <br>
-    <div class="container">
+    <div class="container offset-md-2">
         <h1 style="text-align: center; color: white;">Reserveringen Verwijderen</h1>
         <br>
         <table class="table table-bordered text-white text-center">
@@ -58,16 +58,22 @@
                 <th scope="col">Naam</th>
                 <th scope="col">Telefoon</th>
                 <th scope="col">Aatal Personen</th>
+                <th scope="col">Straat</th>
+                <th scope="col">Huisnummer</th>
+                <th scope="col">Toevoeging Huisnummer</th>
+                <th scope="col">Postcode</th>
+                <th scope="col">Woonplaats</th>
+                <th scope="col">Land</th>
                 <th scope="col">Reserveringen Verwijderen</th>
             </tr>
             </thead>
 
             <?php
-
-            $sql = "SELECT id, datum, tijd, tafel, klantnaam, telefoonnummer, aantalpersonen FROM reserveringen";
+            //De query die data uit de database Select
+            $sql = "SELECT id, datum, tijd, tafel, klantnaam, telefoonnummer, aantalpersonen, straat, huisnummer, huisnummertoevoeging, postcode, woonplaats, land FROM reserveringen";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
-                // output data of each row
+                //De geselecteerde data op de pagina laten zien
                 while($row = $result->fetch_assoc()) {
                     echo "<tr><td>" . $row["datum"] . "</td>
                                 <td>" . $row["tijd"]. "</td>
@@ -75,7 +81,13 @@
                                         <td>" . $row["klantnaam"]. "</td>
                                             <td>" . $row["telefoonnummer"]. "</td>
                                                 <td>" . $row["aantalpersonen"]. "</td>
-                                                    <td><a href='./reserveringenverwijderen.php?id=". $row['id'] ."' class='btn btn-danger'>Verwijder Reservering</a></td></tr>";
+                                                    <td>" .$row["straat"]. "</td>
+                                                        <td>" .$row["huisnummer"]. "</td>
+                                                            <td>" .$row["huisnummertoevoeging"]. "</td>
+                                                                <td>" .$row["postcode"]. "</td>
+                                                                    <td>" .$row["woonplaats"]. "</td>
+                                                                        <td>" .$row["land"]. "</td>
+                                                                             <td><a href='./reserveringenverwijderen.php?id=". $row['id'] ."' class='btn btn-danger'>Verwijder Reservering</a></td></tr>";
                 }
                 echo "</table>";
             }

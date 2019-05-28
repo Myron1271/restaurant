@@ -15,7 +15,7 @@
         $query = "SELECT * FROM reserveringen WHERE klantnaam= '".$Name."'";
         $check = mysqli_query($conn, $query);
 
-        //Als de naam in de database staat zal die alleen deze fail message laten zien
+        //Als de naam in de database staat zal die deze fail message laten zien
         if (mysqli_num_rows($check) >= 1)
         {
             $_SESSION['FailMessage'] = "Op de naam: $Name is al een reservering gemaakt!";
@@ -31,8 +31,15 @@
             $Name = $conn->real_escape_string($_POST['klantnaam']);
             $Telefoon = $conn->real_escape_string($_POST['telefoonnummer']);
             $Personen = $conn->real_escape_string($_POST['aantalpersonen']);
+            $Straat = $conn->real_escape_string($_POST['straat']);
+            $Huisnummer = $conn->real_escape_string($_POST['huisnummer']);
+            $HuisnummerToevoeging = $conn->real_escape_string($_POST['huisnummertoevoeging']);
+            $Postcode = $conn->real_escape_string($_POST['postcode']);
+            $Woonplaats = $conn->real_escape_string($_POST['woonplaats']);
+            $Land = $conn->real_escape_string($_POST['land']);
 
-            $sql = "INSERT INTO reserveringen (datum, tijd, tafel, klantnaam, telefoonnummer, aantalpersonen)" . "VALUE ('$Date', '$Time', '$Table', '$Name', '$Telefoon', '$Personen')";
+            $sql = "INSERT INTO reserveringen (datum, tijd, tafel, klantnaam, telefoonnummer, aantalpersonen, straat, huisnummer, huisnummertoevoeging, postcode, woonplaats, land)"
+                     . "VALUE ('$Date', '$Time', '$Table', '$Name', '$Telefoon', '$Personen', '$Straat', '$Huisnummer', '$HuisnummerToevoeging', '$Postcode', '$Woonplaats', '$Land')";
 
             //De messages die de gebruiker laten weten wat de uitkomst is van de functie
             if ($conn->query($sql) === true)

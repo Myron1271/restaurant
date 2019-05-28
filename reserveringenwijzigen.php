@@ -48,7 +48,7 @@
 
     <br>
 
-    <div class="container">
+    <div class="container offset-md-1">
         <h1 style="text-align: center; color: white;">Reserveringen wijzigen</h1>
         <br>
         <!--De Table waar de data in moet komen te staan-->
@@ -57,10 +57,16 @@
             <tr>
                 <th scope="col">Datum</th>
                 <th scope="col">Tijd</th>
-                <th scope="col">Tafel</th>
-                <th scope="col">Naam</th>
-                <th scope="col">Telefoon</th>
+                <th scope="col">Tafelnummer</th>
+                <th scope="col">Klantnaam</th>
+                <th scope="col">Telefoonnummer</th>
                 <th scope="col">Aatal Personen</th>
+                <th scope="col">Straat</th>
+                <th scope="col">Huisnummer</th>
+                <th scope="col">Toevoeging Huisnummer</th>
+                <th scope="col">Postcode</th>
+                <th scope="col">Woonplaats</th>
+                <th scope="col">Land</th>
                 <th scope="col">Wijzig Reserveringen</th>
             </tr>
             </thead>
@@ -68,18 +74,24 @@
             <?php
 
             //Query die de data uit de database select
-            $sql = "SELECT id, datum, tijd, tafel, klantnaam, telefoonnummer, aantalpersonen FROM reserveringen";
+            $sql = "SELECT id, datum, tijd, tafel, klantnaam, telefoonnummer, aantalpersonen, straat, huisnummer, huisnummertoevoeging, postcode, woonplaats, land FROM reserveringen";
             $result = $conn->query($sql);
             if ($result->num_rows > 0)
             {
-                //Dit laat de data zien in elke row
+                ////De geselecteerde data op de pagina laten zien
                 while($row = $result->fetch_assoc()) {
-                    echo "<tr><td>" .$row["datum"].         "<input type='date' name='datum' class='form-control' required></td>
-                              <td>" .$row["tijd"].          "<input type='time' name='tijd' class='form-control' required></td>
-                              <td>" .$row["tafel"].         "<input type='number' name='tafel' class='form-control' required></td>
-                              <td>" .$row["klantnaam"].     "<input type='text' name='klantnaam' class='form-control' required></td>
-                              <td>" .$row["telefoonnummer"]."<input type='tel' name='telefoonnummer' minlength='10' maxlength='10' class='form-control' required></td>
-                              <td>" .$row["aantalpersonen"]."<input type='number' name='aantalpersonen' class='form-control' required></td>
+                    echo "<tr><td>" .$row["datum"].                 "<input type='date' name='datum' class='form-control' required></td>
+                              <td>" .$row["tijd"].                  "<input type='time' name='tijd' class='form-control' required></td>
+                              <td>" .$row["tafel"].                 "<input type='number' name='tafel' class='form-control' max=\"10\" onkeyup=\"if (this.value > 10) this.value = 10;\"  required></td>
+                              <td>" .$row["klantnaam"].             "<input type='text' name='klantnaam' class='form-control' required></td>
+                              <td>" .$row["telefoonnummer"].        "<input type='tel' name='telefoonnummer' minlength='10' maxlength='10' class='form-control' required></td>
+                              <td>" .$row["aantalpersonen"].        "<input type='number' name='aantalpersonen' class='form-control' max=\"50\" onkeyup=\"if (this.value > 50) this.value = 50;\" required></td>
+                              <td>" .$row["straat"].                "<input type='text' name='straat' class='form-control' required </td>
+                              <td>" .$row["huisnummer"].            "<input type='number' name='huisnummer' class='form-control' required </td>
+                              <td>" .$row["huisnummertoevoeging"].  "<input type='text' name='huisnummertoevoeging' class='form-control'</td>
+                              <td>" .$row["postcode"].              "<input type='text' name='postcode' class='form-control' required </td>
+                              <td>" .$row["woonplaats"].            "<input type='text' name='woonplaats' class='form-control' required </td>
+                              <td>" .$row["land"].                  "<input type='text' name='land' class='form-control' required </td>
                               <td><a href='./reserveringenwijzigen.php?id=". $row['id'] ."' class='btn btn-info'>Wijzig Reservering</a></td></tr>";
                 }
                 echo "</table>";

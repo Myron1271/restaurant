@@ -45,25 +45,49 @@
                 <div class="ReserverenText">Datum</div>
                 <input type="date" name="datum" class="form-control" required>
             </div>
-            <div class="col-md-4 offset-md-4" style="margin-top: 10px">
+            <div class="col-md-4 offset-md-0" style="margin-top: 10px">
                 <div class="ReserverenText">Tijd</div>
                 <input type="time" name="tijd" class="form-control" required>
             </div>
-            <div class="col-md-4 offset-md-4" style="margin-top: 10px">
-                <div class="ReserverenText">Tafel (1 van de 10)</div>
-                <input style="text-align: center" type="number" name="tafel" class="form-control" max="10" onkeyup="if (this.value > 10) this.value = 10;" required>
+            <div class="col-md-4 offset-md-0" style="margin-top: 10px">
+                <div class="ReserverenText">Tafel</div>
+                <input style="text-align: center" placeholder="1 van de 10" type="number" name="tafel" class="form-control" max="10" onkeyup="if (this.value > 10) this.value = 10;" required>
             </div>
-            <div class="col-md-6 offset-md-3" style="margin-top: 10px">
+            <div class="col-md-4 offset-md-0" style="margin-top: 10px">
+                <div class="ReserverenText">Aantal Personen</div>
+                <input style="text-align: center" placeholder="Max 50" type="number" name="aantalpersonen" class="form-control" max="50" onkeyup="if (this.value > 50) this.value = 50;" required>
+            </div>
+            <div class="col-md-6 offset-md-0" style="margin-top: 10px">
                 <div class="ReserverenText">Klant Naam</div>
                 <input type="text" name="klantnaam" class="form-control" required>
             </div>
-            <div class="col-md-6 offset-md-3" style="margin-top: 10px">
+            <div class="col-md-6 offset-md-0" style="margin-top: 10px">
                 <div class="ReserverenText">Telefoonnummer</div>
-                <input type="tel" name="telefoonnummer"  class="form-control" minlength="10" maxlength="10" required>
+                <input type="tel" name="telefoonnummer" class="form-control" minlength="10" maxlength="10" required>
             </div>
-            <div class="col-md-4 offset-md-4" style="margin-top: 10px">
-                 <div class="ReserverenText">Aantal Personen (Max 50)</div>
-                <input style="text-align: center" type="number" name="aantalpersonen" class="form-control" max="50" onkeyup="if (this.value > 50) this.value = 50;" required>
+            <div class="col-md-5 offset-md-0" style="margin-top: 10px">
+                <div class="ReserverenText">Straat</div>
+                <input type="text" name="straat" class="form-control" required>
+            </div>
+            <div class="col-md-3 offset-md-0" style="margin-top: 10px">
+                <div class="ReserverenText">Huisnummer</div>
+                <input type="text" name="huisnummer" class="form-control" required>
+            </div>
+            <div class="col-md-3 offset-md-0" style="margin-top: 10px">
+                <div class="ReserverenText">toevoeging</div>
+                <input type="text" name="huisnummertoevoeging" class="form-control">
+            </div>
+            <div class="col-md-6 offset-md-0" style="margin-top: 10px">
+                <div class="ReserverenText">Postcode</div>
+                <input type="text" name="postcode" class="form-control" required>
+            </div>
+            <div class="col-md-6 offset-md-0" style="margin-top: 10px">
+                <div class="ReserverenText">Woonplaats</div>
+                <input type="text" name="woonplaats" class="form-control" required>
+            </div>
+            <div class="col-md-6 offset-md-3" style="margin-top: 10px">
+                <div class="ReserverenText">Land</div>
+                <input type="text" name="land" class="form-control" required>
             </div>
         </div>
         <button class="btn btn-info my-4 btn-block col-md-8 offset-md-2" type="Submit" name="Submit_Reserveren">Reserveren</button>

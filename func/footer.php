@@ -17,7 +17,7 @@
         <hr class="FooterLine " style="margin: 0 20%;">
         <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
             <div class="col-md-8 pt-3 text-dark">
-                <p>Vind hier alle informatie over de Leeuwenborghse Voetbal Vereniging!</p>
+                <p>Vind hier alle informatie over Excellent Taste!</p>
             </div>
         </div>
     </div>
