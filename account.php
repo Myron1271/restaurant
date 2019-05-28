@@ -76,8 +76,8 @@
             <div class="col-sm-4">
                 <div class="card">
                     <div class="card-body text-center">
-                        <h5 class="card-title">Klik hier op de knop om naar de bon te gaan</h5>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Klik hier op de knop om reserveringen te wijzigen</h5>
+                        <a href="reserveringenwijzigen.php" class="btn btn-primary">Wijzig Reserveringen</a>
                     </div>
                 </div>
             </div>
