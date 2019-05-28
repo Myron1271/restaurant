@@ -11,6 +11,7 @@
     }
 
     include_once './func/bon.func.php';
+    include_once './func/bon.verwijderen.func.php';
 
 ?>
 
@@ -33,7 +34,7 @@
 
 </head>
 
-<body background="img/Restaurant-Backround1.png" style="background-size: cover";>
+<body style="background-color: darkslategray">
 
 <header>
     <?php
@@ -44,19 +45,51 @@
 <main>
 
     <br>
-    <br>
+
+    <div class="container offset-md-2">
+        <h1 style="text-align: center; color: white;">Alle Bonnen</h1>
+        <br>
+        <table class="table table-bordered text-white text-center">
+            <thead class="thead-light">
+            <tr>
+                <th scope="col">Tafel</th>
+                <th scope="col">Naam Eten</th>
+                <th scope="col">Prijs Eten</th>
+                <th scope="col">Naam Drinken</th>
+                <th scope="col">Prijs Drinken</th>
+                <th scope="col">Totaal Bedrag</th>
+                <th scope="col">Verwijder Bon</th>
+            </tr>
+            </thead>
+
+            <?php
+
+            $sql = "SELECT id, tafel, naameten, prijseten, naamdrinken, prijsdrinken, prijseten+prijsdrinken as totaalprijs FROM bon";
 
 
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+                //De geselecteerde data op de pagina laten zien
+                while($row = $result->fetch_assoc())
+                {
+                    echo "<tr><td>" .$row["tafel"] ."</td>
+                                <td>" .$row["naameten"]."</td>
+                                <td>" .$row["prijseten"]. "</td>
+                                <td>" .$row["naamdrinken"]. "</td>
+                                <td>" .$row["prijsdrinken"]. "</td>
+                                <td>" .$row["totaalprijs"]."</td>
+                                <td><a href='./bon.php?id=". $row['id'] ."' class='btn btn-danger'>Verwijder Bon</a></td></tr>";
+                }
+                echo "</table>";
+            }
+            else
+            {
+                echo "<h3 style='text-align: center; color: red;'>Helaas zijn er op dit moment geen Bonnen!</h3>";
+            }
+            ?>
+        </table>
+    </div>
 
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <br>
     <br>
     <br>

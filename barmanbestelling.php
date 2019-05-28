@@ -1,6 +1,5 @@
 <?php
 
-    //Dit start de session van de ingelogde user
     session_start();
     if (isset($_SESSION['user']))
     {
@@ -11,8 +10,8 @@
         header("location: inloggen.php");
     }
 
-    include_once './func/dranken.toevoegen.func.php';
-
+    include_once './func/bon.func.php';
+    include_once './func/barman.bestelling.verwijderen.func.php';
 
 ?>
 
@@ -31,64 +30,89 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Excellent Taste</title>
+    <title>Barman Bestellingen</title>
 
 </head>
 
 <body style="background-color: darkslategray">
 
 <header>
-    <!--Dit zorgt ervoor dat de navbar op elke pagina komt te staan-->
     <?php
     include_once 'func/header.php';
     ?>
 </header>
 
-
 <main>
-    <br>
-    <br>
-    <form class="text-center p-5 col-md-4 offset-md-4 bg-light rounded position-relative" action="drankentoevoegen.php" method="post">
-        <p class="FormText mb-4">Vul de gegevens in en klik op Drank Toevoegen</p>
-        <div class="ReserveringSuccesMessage"><?= $_SESSION['SuccesMessage'] ?></div>
-        <div class="ReserveringFailMessage"><?= $_SESSION['FailMessage'] ?></div>
-        <div class="row">
-            <div class="col-md-6 offset-md-3 text-center">
-                <div class="ReserverenText">Drank Naam</div>
-                <input type="text" name="dranknaam" class="form-control" required>
-            </div>
-            <div class="col-md-6 offset-md-3 text-center">
-                <div class="ReserverenText">Prijs</div>
-                <input type="number" name="prijs" class="form-control" min="1" step="any" required>
-            </div>
-        </div>
-        <button class="btn btn-info my-4 btn-block col-md-8 offset-md-2" type="Submit" name="Submit_Drank">Drank Toevoegen</button>
-    </form>
-
-
-
-
-
-
-
-
-
-
 
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
+    <div class="container offset-md-2">
+        <h1 style="text-align: center; color: white;">Alle Bestellingen</h1>
+        <br>
+        <table class="table table-bordered text-white text-center">
+            <thead class="thead-light">
+            <tr>
+                <th scope="col">Tafel</th>
+                <th scope="col">Naam Drinken</th>
+                <th scope="col">Verwijder Bestelling</th>
+            </tr>
+            </thead>
+
+            <?php
+
+            $sql = "SELECT id, tafel, naamdrinken FROM bestellingdrinken";
+
+
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+                //De geselecteerde data op de pagina laten zien
+                while($row = $result->fetch_assoc())
+                {
+                    echo "<tr><td>" .$row["tafel"] ."</td>
+                                <td>" .$row["naamdrinken"]."</td>
+                                <td><a href='./barmanbestelling.php?id=". $row['id'] ."' class='btn btn-danger'>Verwijder Bestelling</a></td></tr>";
+                }
+                echo "</table>";
+            }
+            else
+            {
+                echo "<h3 style='text-align: center; color: red;'>Helaas zijn er op dit moment geen Bestellingen!</h3>";
+            }
+            ?>
+        </table>
+    </div>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
 </main>
 
 
+
+
+
 <footer>
-    <!--Dit zorgt ervoor dat de footer op elke pagina komt te staan-->
     <?php
     include_once 'func/footer.php';
     ?>
