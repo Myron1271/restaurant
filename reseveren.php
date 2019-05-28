@@ -37,7 +37,7 @@
     <br>
     <br>
     <form class="text-center p-5 col-md-4 offset-md-4 bg-light rounded position-relative" action="reseveren.php" method="post">
-        <p class="FormText mb-4">Vul de gegevens in en klik Reserveren</p>
+        <p class="FormText mb-4">Vul de gegevens in en klik op Reserveren</p>
         <div class="ReserveringSuccesMessage"><?= $_SESSION['SuccesMessage'] ?></div>
         <div class="ReserveringFailMessage"><?= $_SESSION['FailMessage'] ?></div>
         <div class="row">

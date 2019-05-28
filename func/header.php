@@ -16,9 +16,6 @@
                 <li class="nav-item">
                     <a class="nav-link" id="NavBarTextReseveren" href="./reseveren.php">Reseveren</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="NavBarTextBestellen" href="./bestelling.php">Bestelling</a>
-                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right" id="NavBarText">
                 <li class="nav-item">
@@ -34,6 +31,8 @@
                             <a class="dropdown-item" id="NavBarTextDropDown" href="./reserveringenoverzicht.php">Overzicht Reserveringen</a>
                             <a class="dropdown-item" id="NavBarTextDropDown" href="./reserveringenverwijderen.php">Verwijder Reservering</a>
                             <a class="dropdown-item" id="NavBarTextDropDown" href="./reserveringenwijzigen.php">Wijzig Reservering</a>
+                            <a class="dropdown-item" id="NavBarTextDropDown" href="./drankentoevoegen.php">Dranken Toevoegen</a>
+                            <a class="dropdown-item" id="NavBarTextDropDown" href="./bon.php">Bon Invullen</a>
                             <hr class="FooterLine " style="margin: 0 20%;">
                             <a class="dropdown-item" id="NavBarTextDropDown" href="./func/uitloggen.func.php">Uitloggen</a>
                         </div>

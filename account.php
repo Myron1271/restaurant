@@ -57,7 +57,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <div class="card">
                     <div class="card-body text-center">
                         <h5 class="card-title">Klik op de knop voor een overzicht van de reserveringen</h5>
@@ -65,7 +65,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <div class="card">
                     <div class="card-body text-center">
                         <h5 class="card-title">Klik op de knop om reserveringen te verwijderen</h5>
@@ -73,11 +73,19 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <div class="card">
                     <div class="card-body text-center">
                         <h5 class="card-title">Klik hier op de knop om reserveringen te wijzigen</h5>
                         <a href="reserveringenwijzigen.php" class="btn btn-primary">Wijzig Reserveringen</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Klik hier op de knop om Nieuwe Dranken toe te voegen</h5>
+                        <a href="drankentoevoegen.php" class="btn btn-primary">Dranken Toevoegen</a>
                     </div>
                 </div>
             </div>
